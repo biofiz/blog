@@ -1,0 +1,6 @@
+= simple_form_for post do |f|
+  = f.input :title
+  = f.input :body
+  = f.association :categories, collection: Category.all, input_html: { multiple: true, class: 'selectpicker' }
+  = f.button  :submit, class: 'btn-primary'
+  = link_to "Cancel", :back, class: 'btn btn-primary btn-left'

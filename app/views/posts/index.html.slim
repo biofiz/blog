@@ -1,0 +1,8 @@
+- @posts.each do |post|
+  - @author = post.user
+  .post
+    'Author:
+    = link_to @author.username, posts_path(username: @author.username)
+    h4
+      = link_to post.title, post_path(post)
+    = render 'post', post: post

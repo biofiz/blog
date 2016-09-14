@@ -1,0 +1,8 @@
+p = post.body
+p
+  - post.categories.each do |c|
+    h5
+      'Categories:
+      = c.name
+- if @author == current_user
+  = link_to 'Edit', edit_post_path(post), class: 'edit_link'

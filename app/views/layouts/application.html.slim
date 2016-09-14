@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title
+      = full_title(yield(:title))
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    .container.col-md-9.col-md-offset-2
+      = render 'layouts/header'
+      section.round
+        = flash_messages if flash_messages.present?
+      = yield
+      = render 'layouts/footer'

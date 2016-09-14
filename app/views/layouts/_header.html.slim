@@ -1,0 +1,24 @@
+header.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      .navbar-header
+        button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"]
+          span.sr-only
+            | Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to "My blog", root_path, class: "navbar-brand"
+      nav#bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            = link_to "Home", root_path
+          - if signed_in?
+            li
+              = link_to "New post", new_post_path
+          - if user_signed_in?
+            li
+              = link_to('Logout', destroy_user_session_path, :method => :delete)
+          - else
+            li
+              = link_to('Login', new_user_session_path)
