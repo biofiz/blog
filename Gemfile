@@ -12,7 +12,8 @@ gem 'pg', '0.18.4'
 gem 'slim'
 gem 'simple_form'
 gem 'bootstrap-sass',       '3.2.0.0'
-
+gem 'faker'
+gem 'factory_girl_rails'
 
 group :development, :test do
   gem 'byebug'
