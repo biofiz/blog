@@ -1,8 +1,11 @@
 p = post.body
-p
-  - post.categories.each do |c|
+- if post.categories.present?
+  p
     h5
       'Categories:
-      = c.name
+      - post.categories.each do |c|
+        = c.name
+        | &nbsp;
+
 - if @author == current_user
   = link_to 'Edit', edit_post_path(post), class: 'edit_link'
