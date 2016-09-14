@@ -8,17 +8,16 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
-gem 'pg', '0.17.1'
+gem 'pg', '0.18.4'
 gem 'slim'
 gem 'simple_form'
 gem 'bootstrap-sass',       '3.2.0.0'
+
 
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
-  gem 'faker'
-  gem 'factory_girl_rails'
 end
 
 group :development do
