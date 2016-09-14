@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :check_user, only: [:edit, :update]
 
   def index
-    @posts = params[:username].present? ? Post.for_user(params[:username]) : Post.all
+    @posts = params[:username].present? ? Post.for_user(params[:username]) : Post.order(created_at: :desc)
   end
 
   def new
