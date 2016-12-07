@@ -10,4 +10,4 @@
 
 == Решение
 Приложение на heroku - http://biofiz-blog.herokuapp.com
-(Можно использовать уже созданных пользователей: demo@example.com или demo@example.com  (пароль в обоих случаях - password))
+(Можно использовать уже созданных пользователей: demo@example.com или native@example.com  (пароль в обоих случаях - password))
